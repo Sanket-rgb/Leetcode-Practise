@@ -13,7 +13,7 @@ class Solution:
                 i += 1
             else:
                 j -= 1
-        return -1
+        # return -1
 #         length = len(numbers)
 #         res = []
         
