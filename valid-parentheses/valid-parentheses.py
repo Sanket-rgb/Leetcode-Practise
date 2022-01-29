@@ -21,7 +21,7 @@ class Solution:
                 if stack.pop() != dic[item]:
                     return False
             count += 1
-        return False if len(stack) != 0 and count != N else True
+        return True if len(stack) == 0 or count == N else False
     
     # for item in s:
     #         if s == "(":
