@@ -4,12 +4,11 @@ class Solution:
         N = len(nums)
         hashmap = {}
         
-        for i,item in enumerate(nums):
-            hashmap[item] = i
-        for i in nums:
-            c = target - i
-            if c in hashmap and hashmap[c] != nums.index(i):
-                return [hashmap[c], nums.index(i)]
+        for i in range(N):
+            for j in range(i+1, N):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
+        
         
 #         for i in nums:
 #             c = target - i
