@@ -9,18 +9,21 @@ class Solution:
         if not root:
             return False
         
-        stack = [(root,targetSum - root.val)]
+        if not root.left and not root.right:
+            return targetSum-root.val==0
+        return self.hasPathSum(root.left, targetSum-root.val) or self.hasPathSum(root.right, targetSum-root.val)
+#         stack = [(root,targetSum - root.val)]
         
         
         
-        while stack:
-            node, remainingSum = stack.pop()
-            if not node.left and not node.right and remainingSum == 0:
-                return True
-            if node.right:
-                stack.append((node.right, remainingSum - node.right.val))
-            if node.left:
-                stack.append((node.left, remainingSum - node.left.val))
-        return False
+#         while stack:
+#             node, remainingSum = stack.pop()
+#             if not node.left and not node.right and remainingSum == 0:
+#                 return True
+#             if node.right:
+#                 stack.append((node.right, remainingSum - node.right.val))
+#             if node.left:
+#                 stack.append((node.left, remainingSum - node.left.val))
+#         return False
                 
                 
