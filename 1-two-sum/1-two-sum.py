@@ -1,17 +1,48 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashMap = {}
         
-        N = len(nums)
-        hashmap = {}
-        
-        for i in range(N):
-            hashmap[nums[i]] = i
-        
-        for i in range(N):
+        for i in range(len(nums)):
+            hashMap[nums[i]] = i
+            
+        for i in range(len(nums)):
             c = target - nums[i]
             
-            if c in hashmap and hashmap[c] != i:
-                return [i, hashmap[c]]
+            if c in hashMap and hashMap[c] != i:
+                return [i, hashMap[c]]
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         N = len(nums)
+#         hashmap = {}
+        
+#         for i in range(N):
+#             hashmap[nums[i]] = i
+        
+#         for i in range(N):
+#             c = target - nums[i]
+            
+#             if c in hashmap and hashmap[c] != i:
+#                 return [i, hashmap[c]]
         # for i in range(N):
         #     for j in range(i+1, N):
         #         if nums[j] == target - nums[i]:
